@@ -1,0 +1,183 @@
+{
+  "name": "delorean",
+
+  "hdris": [
+    {"name":"studio", "path": "Panorama.jpeg"}
+  ],
+
+  "materials":{
+    "chassi": {
+      "type": "physical",
+      "side": "double",
+      "map": "Bake_Chassi_combined_4k.png",
+      "normalMap": "Bake_Chassi_normal_4k.png",
+      "envMap": "studio",
+      "metallness": 1,
+      "envMapIntensity": 5
+    },
+    "flaps": {
+      "map": "Bake_Flaps_combined_1k.jpeg",
+      "envMap": "studio"
+    },
+    "ground": {
+      "type": "physical",
+      "map": "ground_texture_1k.jpeg",
+      "scale": 4,
+      "lightMap": "Bake_Ground_combined_2k.jpeg",
+      "lightMapIntensity": 10
+    },
+    "tire":{
+      "type": "physical",
+      "map": "Bake_Tire_combined_1k.jpeg",
+      "normalMap": "Bake_Tire_normal_1k.jpeg",
+      "roughnessMap": "Bake_Tire_roughness_1k.jpeg",
+      "metallicMap": "Bake_Tire_metallic_512.jpeg",
+      "envMap": "studio",
+      "envMapIntensity": 2
+    },
+    "hdri": {
+      "type": "basic",
+      "map": "../hdris/Panorama.jpeg"
+    },
+    "windows":{
+      "type": "standard",
+      "color": "0x222222",
+      "envMap": "studio",
+      "envMapIntensity": 3
+    },
+    "sidemirror": {
+      "type": "physical",
+      "color": "0x818181",
+      "roughness": 0.7,
+      "roughnessMap": "Bake_Sidemirrors_roughness_512.jpeg",
+      "normalMap": "Bake_Sidemirrors_normal_512.jpeg",
+      "envMap": "studio",
+      "envMapIntensity": 1
+    },
+    "light": {
+      "map": "Bake_Lights_combined_512.jpeg",
+      "normalMap": "Bake_Lights_normal_512.jpeg",
+      "emissiveMap": "Bake_Lights_combined_512.jpeg",
+      "emissiveIntensity":100,
+      "envMap": "studio",
+      "envMapIntensity": 1,
+      "metalness": 0.4
+    },
+    "grill":{
+      "map": "Bake_Grill_combined_512.jpeg",
+      "normalMap": "Bake_Grill_normal_512.jpeg",
+      "envMap": "studio",
+      "envMapIntensity": 2,
+      "metalness": 1
+
+    }
+
+  },
+
+  "objects": [
+    {
+      "name": "hdri",
+      "type": "dynamic",
+      "material": "hdri"
+    },
+    {
+      "name": "chassi",
+      "material": "chassi",
+      "promote": "chassi",
+      "fpos": [12, 0],
+      "pos": [0, 0.2, 0],
+      "camAngle": [-1, -0.1, -200, 200]
+    },
+    {
+      "name": "sidemirror",
+      "material": "sidemirror",
+      "promote": "mirrors"
+    },
+    {
+      "name": "windows",
+      "promote": "windows",
+      "material": "windows"
+    },
+    {
+      "name": "floor",
+      "promote": "ground",
+      "pos": [0, 0.2, 0],
+      "material": "ground"
+    },
+    {
+      "name": "tire",
+      "type": "dynamic",
+      "promote": "tires",
+      "size": 0.45,
+      "pos": [1.5, 0.6, 2.2],
+      "rot": [0, 90, 0],
+      "material": "tire"
+    },
+    {
+      "name": "tire",
+      "type": "dynamic",
+      "promote": "tires",
+      "size": 0.45,
+      "pos": [-1.5, 0.6, 2.2],
+      "rot": [0, -90, 0],
+      "material": "tire"
+    },
+    {
+      "name": "tire",
+      "type": "dynamic",
+      "promote": "tires",
+      "size": 0.45,
+      "pos": [1.5, 0.6, -2.6],
+      "rot": [0, 90, 0],
+      "material": "tire"
+    },
+    {
+      "name": "tire",
+      "type": "dynamic",
+      "promote": "tires",
+      "size": 0.45,
+      "pos": [-1.5, 0.6, -2.6],
+      "rot": [0, -90, 0],
+      "material": "tire"
+    },
+    {
+      "name": "flaps",
+      "promote": "flaps",
+      "material": "flaps"
+    },
+    {
+      "name": "lights",
+      "promote": "lights",
+      "size": 0.3,
+      "pos": [1.25, 1.25, 3.75],
+      "material": "light"
+    },
+    {
+      "name": "lights",
+      "promote": "lights",
+      "size": 0.3,
+      "pos": [-1.25, 1.25, 3.75],
+      "material": "light"
+    },
+    {
+      "name": "lights",
+      "promote": "lights",
+      "size": 0.3,
+      "pos": [0.9, 1.25, 3.75],
+      "material": "light"
+    },
+    {
+      "name": "lights",
+      "promote": "lights",
+      "size": 0.3,
+      "pos": [-0.9, 1.25, 3.75],
+      "material": "light"
+    },
+    {
+      "name": "grill",
+      "promote": "grill",
+      "pos": [0, 1.04, 3.45],
+      "material": "grill"
+    }
+  ]
+}

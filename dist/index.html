@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta description="WebGL Interactive Car Demo">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <title>WebGL Car</title>
+  <link rel="stylesheet" href="master.css">
+  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+  <script>
+    function gup( name ) {
+        let url = location.href;
+        name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+        var regexS = "[\\?&]"+name+"=([^&#]*)";
+        var regex = new RegExp( regexS );
+        var results = regex.exec( url );
+        return results == null ? null : results[1];
+    }
+
+
+    let params = gup("scene")
+
+    if (!params)
+    {
+      if(localStorage.scene && window.location.href.indexOf("?") > -1){
+        let url = window.location.href
+        window.location.href = url + "?scene="+localStorage.scene
+      }else{
+        let url = window.location.href
+        window.location.href = url + "?scene=challenger"
+      }
+
+    }
+
+  </script>
+</head>
+<body>
+
+  
+  <div id="car-selector-wrapper">
+    <div id="car-selector-left-button">«</div>
+    <div id="car-selector-right-button">»</div>
+    <div id="car-selector-text"></div>
+  </div>
+
+  <div id="loading-div">
+    <div id="loading-div-wheel">
+      <img src="wheel.svg" alt="">
+    </div>
+    <div id="loading-div-text">
+      Loading...
+    </div>
+  </div>
+
+  <script>
+    let scenes = ["challenger", "dwfb", "delorean"]
+    function findName(element){
+      return element === params;
+    }
+    let i = scenes.findIndex(findName);
+
+    let carSelectorText = document.getElementById("car-selector-text");
+    carSelectorText.innerHTML = params.toUpperCase();
+    let leftButton = document.getElementById("car-selector-left-button")
+    let rightButton = document.getElementById("car-selector-right-button")
+
+    function loadNewSite(){
+      let url = window.location.href.split("?")[0]
+      window.location.href = url + "?scene=" + scenes[i]
+      localStorage.scene = scenes[i]
+      console.log(scene[i])
+    }
+
+    function loadingOut(){
+      window.setTimeout(function(){
+        let loading = document.getElementById("loading-div").classList.add("loading-div-out");
+      }, 2000)
+    }
+
+    leftButton.onclick = function(){
+      if(i == 0){
+        i = 2;
+      }else{
+        i--;
+      }
+      loadNewSite()
+    }
+    rightButton.onclick = function(){
+      if(i === scenes.length-1){
+        i = 0;
+      }else{
+        i++;
+      }
+
+      loadNewSite();
+
+    }
+
+  </script>
+  
+
+  <input type="range" id="range" name="" min="0" step="0.1" max="100" value="100">
+  <script src="./bundle.js" charset="utf-8"></script>
+</body>
+</html>

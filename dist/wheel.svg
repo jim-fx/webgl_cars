@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102">
+  <title>Rad</title>
+  <g id="Ebene_2" data-name="Ebene 2">
+    <g id="Ebene_1-2" data-name="Ebene 1">
+      <g>
+        <circle cx="51" cy="51" r="51" style="fill: #1a1a1a"/>
+        <circle cx="51" cy="51" r="30.5" style="fill: #878787"/>
+        <circle cx="51" cy="51" r="17.5" style="fill: #6b6b6b"/>
+        <circle cx="51" cy="51" r="7.5" style="fill: #a0a0a0"/>
+        <circle cx="51" cy="61" r="1.5" style="fill: #a0a0a0"/>
+        <circle cx="58" cy="58" r="1.5" style="fill: #a0a0a0"/>
+        <circle cx="51" cy="41" r="1.5" style="fill: #a0a0a0"/>
+        <circle cx="61" cy="51" r="1.5" style="fill: #a0a0a0"/>
+        <circle cx="58" cy="44" r="1.5" style="fill: #a0a0a0"/>
+        <circle cx="41" cy="51" r="1.5" style="fill: #a0a0a0"/>
+        <circle cx="44" cy="58" r="1.5" style="fill: #a0a0a0"/>
+        <circle cx="44" cy="44" r="1.5" style="fill: #a0a0a0"/>
+        <g>
+          <path d="M24.36,20.51a40.46,40.46,0,0,0-1.28,59.81" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 4px"/>
+          <path d="M81.48,77.65a40.47,40.47,0,0,0-5.9-58.83" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 4px"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

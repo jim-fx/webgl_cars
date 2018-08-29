@@ -1,0 +1,35 @@
+{
+  "name": "webgl_car",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch --config dev/config/webpack.config.js",
+    "three": "webpack --config dev/config/webpack-threejs.config.js",
+    "build": "webpack --config dev/config/webpack-minify.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copy": "^0.3.1",
+    "gulp": "^3.9.1",
+    "gulp-copy": "^1.1.0",
+    "gulp-image-resize": "^0.13.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-images-convert": "^1.0.1",
+    "gulp-jsonminify": "^1.1.0",
+    "gulp-watch": "^5.0.0",
+    "gulp-webpack": "^1.5.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "sharp": "^0.18.4",
+    "three": "^0.89.0",
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "webpack": "^3.10.0",
+    "webpack-closure-compiler": "^2.1.6",
+    "webpack-stream": "^4.0.0"
+  },
+  "dependencies": {
+    "chokidar": "^2.0.0"
+  }
+}

@@ -1,0 +1,6 @@
+*.blend[0-9]
+*.DS_Store
+dev/
+node_modules/
+.psd
+.psb

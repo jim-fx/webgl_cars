@@ -1,6 +1,7 @@
 *.blend[0-9]
 *.DS_Store
 dev/
+package-lock.json
 node_modules/
 .psd
 .psb
